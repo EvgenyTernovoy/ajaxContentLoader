@@ -1,0 +1,45 @@
+.ajax {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 30px;
+}
+
+.ajax__container {
+    margin-bottom: 25px;
+}
+
+.ajax__container .card {
+    margin-bottom: 20px;
+}
+
+.card.card--orange {
+    border-color: orange;
+}
+
+.card.card--red {
+    border-color: red;
+}
+
+.card.card--blue {
+    border-color: blue;
+}
+
+.btn.is--hide {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+select {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+ul {
+    padding-left: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
