@@ -21,6 +21,10 @@
                     <option value="blue">blue</option>
                     <option value="orange">orange</option>
                 </select>
+                <input id="recommendedFilter" type="checkbox" data-for="ajaxWrapper" class="js--ajaxFilter">
+                <label for="recommendedFilter">
+                    Рекомендуемые
+                </label>
             </form>
         </div>
 

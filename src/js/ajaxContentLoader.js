@@ -12,7 +12,7 @@
         }, options);
 
         var methods = {
-            filterRequest      : function ($form) {
+            _filterRequest      : function ($form) {
                 $.ajax({
                     url     : $form.attr('action'),
                     data    : $form.serialize(),
@@ -28,13 +28,13 @@
                     }
                 });
             },
-            btnRequest : function ($btn) {
+            _btnRequest : function ($btn) {
                 $.ajax({
                     url       : $btn.attr('href'),
                     dataType  : 'JSON',
                     method    : 'POST',
                     cache     : false,
-                    context   : this,
+                    context   : $btn[0],
                     beforeSend: function () {
                         $btn.addClass('loading');
                     },
@@ -128,11 +128,11 @@
             e.preventDefault();
             e.stopPropagation();
 
-            methods.btnRequest($(this))
+            methods._btnRequest($(this))
         });
 
         $body.on('change', settings.filterSelector, function (e) {
-            methods.filterRequest($(e.target).closest('form'));
+            methods._filterRequest($(e.target).closest('form'));
         });
     }
 
