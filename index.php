@@ -21,7 +21,7 @@
                     <option value="blue">blue</option>
                     <option value="orange">orange</option>
                 </select>
-                <input id="recommendedFilter" type="checkbox" data-for="ajaxWrapper" class="js--ajaxFilter">
+                <input id="recommendedFilter" name="recommended" type="checkbox" data-for="ajaxWrapper" class="js--ajaxFilter">
                 <label for="recommendedFilter">
                     Рекомендуемые
                 </label>
@@ -67,11 +67,11 @@
 
         <nav class="pagination-wrapper js--ajaxPager">
             <ul class="pagination">
-                <li class="page-item"><a class="page-link" href="#" data-for="ajaxWrapper">Previous</a></li>
-                <li class="page-item active"><a class="page-link" href="#" data-for="ajaxWrapper">1</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-for="ajaxWrapper">2</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-for="ajaxWrapper">3</a></li>
-                <li class="page-item"><a class="page-link" href="#" data-for="ajaxWrapper">Next</a></li>
+                <li class="page-item"><a class="page-link js--ajaxBtn" href="#" data-for="ajaxWrapper">Previous</a></li>
+                <li class="page-item active"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=1" data-for="ajaxWrapper">1</a></li>
+                <li class="page-item"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=2" data-for="ajaxWrapper">2</a></li>
+                <li class="page-item"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=3" data-for="ajaxWrapper">3</a></li>
+                <li class="page-item"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=2" data-for="ajaxWrapper">Next</a></li>
             </ul>
         </nav>
     </div>

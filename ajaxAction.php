@@ -190,11 +190,11 @@ if ($_GET['color'] == 'red') {
         ',
         'pager' => '
                 <ul class="pagination">
-                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                    <li class="page-item ' . ($page == 2 ? "active" : "") . '"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item ' . ($page == 3 ? "active" : "") . '"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item ' . ($page == 4 ? "active" : "") . '"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item ' . ($page == 4 ? "disabled" : "") . '"><a class="page-link" href="#">Next</a></li>
+                    <li class="page-item ' . ($page == 2 ? "disabled" : "") . '"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=' . ($page - 2) . '" data-for="ajaxWrapper">Previous</a></li>
+                    <li class="page-item ' . ($page == 2 ? "active" : "") . '"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=1" data-for="ajaxWrapper">1</a></li>
+                    <li class="page-item ' . ($page == 3 ? "active" : "") . '"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=2" data-for="ajaxWrapper">2</a></li>
+                    <li class="page-item ' . ($page == 4 ? "active" : "") . '"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=3" data-for="ajaxWrapper">3</a></li>
+                    <li class="page-item ' . ($page == 4 ? "disabled" : "") . '"><a class="page-link js--ajaxBtn" href="/ajaxAction.php?page=' . $page . '" data-for="ajaxWrapper">Next</a></li>
                 </ul>'
     ]);
 }

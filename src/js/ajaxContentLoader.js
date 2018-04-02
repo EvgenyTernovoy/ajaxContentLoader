@@ -3,16 +3,15 @@
     $.fn.ajaxContentLoader = function (options) {
 
         var settings = $.extend({
-            btnSelector         : '.js--ajaxBtn',
-            pagerSelector       : '.js--ajaxPager',
-            containerSelector   : '.js--ajaxContainer',
-            controlSelector     : '.js--ajaxControlWrapper',
-            filterSelector      : '.js--ajaxFilter',
-            filterSubmitSelector: 'js--ajaxFilterSubmit'
+            btnSelector      : '.js--ajaxBtn',
+            pagerSelector    : '.js--ajaxPager',
+            containerSelector: '.js--ajaxContainer',
+            controlSelector  : '.js--ajaxControlWrapper',
+            filterSelector   : '.js--ajaxFilter'
         }, options);
 
         var methods = {
-            _filterRequest      : function ($form) {
+            _filterRequest     : function ($form) {
                 $.ajax({
                     url     : $form.attr('action'),
                     data    : $form.serialize(),
@@ -22,13 +21,13 @@
                     success : methods._onSuccess,
                     complete: function () {
                         var $context = $(this);
-                        if($context.is('form')) {
+                        if ($context.is('form')) {
                             window.history.replaceState(null, null, $context.attr('action') + '?' + $context.serialize());
                         }
                     }
                 });
             },
-            _btnRequest : function ($btn) {
+            _btnRequest        : function ($btn) {
                 $.ajax({
                     url       : $btn.attr('href'),
                     dataType  : 'JSON',
@@ -81,12 +80,6 @@
             _appendLoop        : function ($container, loop) {
                 $container.append(loop);
             },
-            _isPagerButton     : function ($button) {
-                return $button.closest(settings.pagerSelector).length > 0;
-            },
-            _isExist           : function (element) {
-                return element !== undefined && element !== null
-            },
             _replaceMoreButtons: function ($wrapper, $context, dataBtn) {
                 var $control = $wrapper.find(settings.controlSelector),
                     dataIsEmpty = dataBtn.indexOf('<') === -1;
@@ -119,6 +112,12 @@
                 } else {
                     $pager.html(dataPager);
                 }
+            },
+            _isPagerButton     : function ($button) {
+                return $button.closest(settings.pagerSelector).length > 0;
+            },
+            _isExist           : function (element) {
+                return element !== undefined && element !== null
             }
         };
 
