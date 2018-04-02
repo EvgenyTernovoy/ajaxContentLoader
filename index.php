@@ -11,7 +11,7 @@
 <body>
 
 <div class="ajax">
-    <h1>Как работать с ajax подгрузкой блоков и ajax фильтрами.</h1>
+    <h1>jQuery plugin для Ajax подгрузки эллементов.</h1>
     <div class="" id="ajaxWrapper">
         <div class="filters">
             <form data-for="ajaxWrapper" action="/ajaxAction.php" method="get">
